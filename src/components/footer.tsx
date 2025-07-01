@@ -72,7 +72,7 @@ export default function Footer() {
               >
                 <h3 className="text-white font-light text-lg mb-4 tracking-tight">{category}</h3>
                 <ul className="space-y-3">
-                  {links.map((link, linkIndex) => (
+                  {links.map((link, ) => (
                     <li key={link.name}>
                       <Link
                         href={link.href}
