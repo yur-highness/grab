@@ -11,14 +11,14 @@ export default function LargeDashboardMockup() {
     <div className="w-[1200px] h-[1000px] bg-transparent backdrop-blur-3xl border border-purple-500/30 rounded-3xl p-8 shadow-2xl shadow-purple-900/40 relative overflow-hidden">
       {/* Enhanced Animated Background Pattern */}
       <div className="absolute inset-0 opacity-15">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-700 to-indigo-700 animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-purple-600/30 rounded-full blur-xl animate-bounce"></div>
+        <div className="absolute top-0 left-0 w-full h-full  animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32  rounded-full blur-xl animate-bounce"></div>
         <div
-          className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-indigo-600/30 rounded-full blur-xl animate-bounce"
+          className="absolute bottom-1/4 right-1/4 w-24 h-24  rounded-full blur-xl animate-bounce"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
-          className="absolute top-3/4 left-3/4 w-20 h-20 bg-purple-500/25 rounded-full blur-lg animate-bounce"
+          className="absolute top-3/4 left-3/4 w-20 h-20  rounded-full blur-lg animate-bounce"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
