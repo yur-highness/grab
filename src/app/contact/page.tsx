@@ -10,6 +10,8 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Hero from "@/components/hero"
 import FeaturedInSection from "@/components/featured"
+import { BarChart3, Shield, Star, TrendingUp, Users, Wallet, Zap, } from "lucide-react"
+import { useRef } from "react"
 
 
 
@@ -176,7 +178,7 @@ function HowItWorksSection() {
       image: "/placeholder.svg?height=200&width=300",
     },
     {
-      icon: Robot,
+      icon: TrendingUp,
       title: "Set Up Your AI Assistant",
       description: "Configure your trading preferences and risk tolerance. Our AI learns your style.",
       image: "/placeholder.svg?height=200&width=300",
