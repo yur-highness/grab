@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
 import { Users, Target, Award, Globe } from "lucide-react"
-import Navigation from "@/components/"
+import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 
 const fadeInUp = {
