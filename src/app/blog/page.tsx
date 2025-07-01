@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"s
+import Footer from "@/components/footer"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60, filter: "blur(10px)" },
