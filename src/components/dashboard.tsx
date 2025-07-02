@@ -8,19 +8,19 @@ import { TrendingUp } from "lucide-react"
 
 export default function LargeDashboardMockup() {
   return (
-    <div className="w-[1200px] h-[1000px] bg-slate-900/0 backdrop-blur-3xl border border-purple-500/30 rounded-3xl p-8 shadow-2xl shadow-purple-900/40 relative overflow-hidden">
+    <div className="w-[1200px] h-[1000px] bg-transparent backdrop-blur-3xl border border-purple-500/30 rounded-3xl p-8 shadow-2xl shadow-purple-900/40 relative overflow-hidden">
       {/* Enhanced Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-15">
-        <div className="absolute top-0 left-0 w-full h-full  animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-32 h-32  rounded-full blur-xl animate-bounce"></div>
-        <div
+      <div className="absolute inset-0 opacity-0  pointer-events-none">
+        {/* <div className="absolute top-0 left-0 w-full h-full  animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32  rounded-full blur-xl animate-bounce"></div> */}
+        {/* <div
           className="absolute bottom-1/4 right-1/4 w-24 h-24  rounded-full blur-xl animate-bounce"
           style={{ animationDelay: "1s" }}
         ></div>
         <div
           className="absolute top-3/4 left-3/4 w-20 h-20  rounded-full blur-lg animate-bounce"
           style={{ animationDelay: "2s" }}
-        ></div>
+        ></div> */}
       </div>
 
       {/* Header Section */}
@@ -48,7 +48,7 @@ export default function LargeDashboardMockup() {
       {/* Main Stats Grid */}
       <div className="grid grid-cols-4 gap-6 mb-8">
         <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
-          <Card className="p-6 bg-white/8 backdrop-blur-xl border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 shadow-lg shadow-purple-900/20">
+          <Card className="p-6 bg-transparent  border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 shadow-lg shadow-purple-900/20">
             <div className="text-white/70 text-sm font-light mb-2">Total Balance</div>
             <div className="text-3xl font-light text-white mb-2">$127,543</div>
             <div className="text-green-400 text-sm flex items-center">
@@ -59,7 +59,7 @@ export default function LargeDashboardMockup() {
         </motion.div>
 
         <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
-          <Card className="p-6 bg-white/8 backdrop-blur-xl border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 shadow-lg shadow-purple-900/20">
+          <Card className="p-6 bg-transparent  border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 shadow-lg shadow-purple-900/20">
             <div className="text-white/70 text-sm font-light mb-2">Active Trades</div>
             <div className="text-3xl font-light text-white mb-2">24</div>
             <div className="text-purple-300 text-sm">Running</div>
@@ -67,7 +67,7 @@ export default function LargeDashboardMockup() {
         </motion.div>
 
         <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
-          <Card className="p-6 bg-white/8 backdrop-blur-xl border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 shadow-lg shadow-purple-900/20">
+          <Card className="p-6 bg-transparent  border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 shadow-lg shadow-purple-900/20">
             <div className="text-white/70 text-sm font-light mb-2">Success Rate</div>
             <div className="text-3xl font-light text-white mb-2">94.2%</div>
             <div className="text-indigo-300 text-sm">Accuracy</div>
@@ -75,7 +75,7 @@ export default function LargeDashboardMockup() {
         </motion.div>
 
         <motion.div whileHover={{ scale: 1.05, y: -5 }} transition={{ type: "spring", stiffness: 300 }}>
-          <Card className="p-6 bg-white/8 backdrop-blur-xl border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 shadow-lg shadow-purple-900/20">
+          <Card className="p-6 bg-transparent  border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 shadow-lg shadow-purple-900/20">
             <div className="text-white/70 text-sm font-light mb-2">24h Profit</div>
             <div className="text-3xl font-light text-white mb-2">$8,247</div>
             <div className="text-green-400 text-sm">+6.9%</div>
@@ -86,27 +86,27 @@ export default function LargeDashboardMockup() {
       {/* Large Chart Section */}
       <div className="grid grid-cols-3 gap-6 mb-6">
         <div className="col-span-2">
-          <Card className="p-6 bg-white/8 backdrop-blur-xl border-purple-500/20 h-64 shadow-lg shadow-purple-900/20">
+          <Card className="p-6 bg-transparent  border-purple-500/20 h-64 shadow-lg shadow-purple-900/20">
             <div className="flex items-center justify-between mb-6">
               <h4 className="text-white font-light text-lg">Portfolio Performance</h4>
               <div className="flex space-x-2">
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Badge
                     variant="outline"
-                    className="text-purple-300 border-purple-500/40 text-sm px-3 py-1 cursor-pointer bg-purple-900/20"
+                    className="text-purple-300 border-purple-500/4 text-sm px-3 py-1 cursor-pointer bg-purple-900/2"
                   >
                     1D
                   </Badge>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                  <Badge className="bg-purple-700/30 text-purple-200 border-purple-500/40 text-sm px-3 py-1 cursor-pointer">
+                  <Badge className="bg-purple-700/3 text-purple-200 border-purple-500/4 text-sm px-3 py-1 cursor-pointer">
                     7D
                   </Badge>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                   <Badge
                     variant="outline"
-                    className="text-purple-300 border-purple-500/40 text-sm px-3 py-1 cursor-pointer bg-purple-900/20"
+                    className="text-purple-300 border-purple-500/40 text-sm px-3 py-1 cursor-pointer bg-purple-900/2"
                   >
                     1M
                   </Badge>
@@ -138,7 +138,7 @@ export default function LargeDashboardMockup() {
         </div>
 
         <div className="space-y-4">
-          <Card className="p-4 bg-white/8 backdrop-blur-xl border-purple-500/20 shadow-lg shadow-purple-900/20">
+          <Card className="p-4 bg-transparent  border-purple-500/20 shadow-lg shadow-purple-900/20">
             <div className="flex items-center justify-between mb-3">
               <h4 className="text-white font-light text-sm">AI Status</h4>
               <motion.div
@@ -163,7 +163,7 @@ export default function LargeDashboardMockup() {
             </div>
           </Card>
 
-          <Card className="p-4 bg-white/8 backdrop-blur-xl border-purple-500/20 shadow-lg shadow-purple-900/20">
+          <Card className="p-4 bg-transparent  border-purple-500/20 shadow-lg shadow-purple-900/20">
             <h4 className="text-white font-light text-sm mb-3">AI Confidence</h4>
             <div className="space-y-2">
               <div className="flex justify-between text-xs">
