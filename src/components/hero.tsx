@@ -212,7 +212,7 @@ import { ArrowRight } from "lucide-react"
               ></div>
 
               {/* Globe with Dark Purple Filter */}
-              <div className="relative w-[700px] h-[700px] lg:w-[800px] lg:h-[800px]">
+              <div className="relative w-[1200px] h-[1200px] lg:w-[800px] lg:h-[800px]">
                 <iframe
                   src="https://my.spline.design/worldplanet-j1w9dCnAg5os0QEOZee5AjAs/"
                   frameBorder="0"
