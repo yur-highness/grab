@@ -201,7 +201,7 @@ import { ArrowRight } from "lucide-react"
               transition={{ delay: 0.3 }}
             >
               {/* Intense Dark Purple Glow Effects */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-950/60 to-indigo-950/60 rounded-full blur-3xl scale-150 animate-pulse"></div>
+              {/* <div className="absolute inset-0 bg-gradient-to-r from-purple-950/60 to-indigo-950/60 rounded-full blur-3xl scale-150 animate-pulse"></div>
               <div
                 className="absolute inset-0 bg-gradient-to-r from-purple-900/40 to-indigo-900/40 rounded-full blur-2xl scale-125 animate-pulse"
                 style={{ animationDelay: "0.5s" }}
@@ -209,7 +209,7 @@ import { ArrowRight } from "lucide-react"
               <div
                 className="absolute inset-0 bg-gradient-to-r from-purple-800/30 to-indigo-800/30 rounded-full blur-xl scale-110 animate-pulse"
                 style={{ animationDelay: "1s" }}
-              ></div>
+              ></div> */}
 
               {/* Globe with Dark Purple Filter */}
               <div className="relative w-[1200px] h-[1200px] lg:w-[800px] lg:h-[800px]">
