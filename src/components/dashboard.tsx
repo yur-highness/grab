@@ -8,7 +8,7 @@ import { TrendingUp } from "lucide-react"
 
 export default function LargeDashboardMockup() {
   return (
-    <div className="w-[1200px] h-[1000px] bg-transparent backdrop-blur-3xl border border-purple-500/30 rounded-3xl p-8 shadow-2xl shadow-purple-900/40 relative overflow-hidden">
+    <div className="w-[1200px] h-[1000px] bg-transparent  border border-purple-500/30 rounded-3xl p-8 shadow-2xl shadow-purple-900/40 relative overflow-hidden">
       {/* Enhanced Animated Background Pattern */}
       <div className="absolute inset-0 opacity-0  pointer-events-none">
         {/* <div className="absolute top-0 left-0 w-full h-full  animate-pulse"></div>
