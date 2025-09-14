@@ -13,7 +13,7 @@ export default function HowItWorksSection() {
       icon: Wallet,
       title: "Connect Your Wallet",
       description: "Securely link your crypto wallet in seconds with our encrypted connection protocol.",
-      image: "/walletimg.jpg?height=200&width=300",
+      image: "/walletImg.jpg?height=200&width=300",
     },
     {
       icon: Robot,
