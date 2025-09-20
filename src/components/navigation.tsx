@@ -5,11 +5,14 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import { signIn, signOut, useSession } from "next-auth/react"
+import { Providers } from "../app/provider";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+ const session = useSession();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -37,6 +40,8 @@ export default function Navigation() {
 
   return (
     <>
+     <Providers>
+    
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled ? "bg-black/20 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
@@ -46,17 +51,17 @@ export default function Navigation() {
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-16 ml-8">
             {/* Logo */}
             <motion.div className="flex-shrink-0" whileHover={{ scale: 1.05 }}>
-              <Link href="/" className="text-2xl font-light text-white tracking-tighter">
+              <Link href="/" className="text-2xl font-light text-white tracking-tighter ">
                 Grab
               </Link>
             </motion.div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
+              <div className="ml-42 flex items-baseline space-x-8">
                 {navItems.map((item) => (
                   <button
                     key={item.name}
@@ -67,16 +72,37 @@ export default function Navigation() {
                   </button>
                 ))}
               </div>
+               
             </div>
+            
+          {   
+      
+          session.data?.user ? (
+            <Button
+              className="bg-gradient-to-r from-purple-500 to-pink-500 ml-4 hover:from-purple-600 hover:to-pink-600 text-white py-2 px-4 font-light rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all duration-300 border-0 cursor-pointer"
+              onClick={() => signOut()}
+            >
+              logout
+            </Button>
+          ) : (
+            <Button
+              className="bg-gradient-to-r from-purple-500 to-pink-500 ml-4 hover:from-purple-600 hover:to-pink-600 text-white py-2 px-4 font-light rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all duration-300 border-0 cursor-pointer"
+              onClick={() => signIn()}
+            >
+              signin
+            </Button>
+          )}
 
             {/* Desktop CTA */}
             <div className="hidden md:block">
+               
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-2 font-light rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all duration-300 border-0"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-2 py-2 font-light rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all duration-300 border-0 "
               >
                 Get Started
               </Button>
+                    
             </div>
 
             {/* Mobile menu button */}
@@ -141,12 +167,18 @@ export default function Navigation() {
                   </nav>
                 </div>
 
-                <div className="p-6 border-t border-white/10">
+                <div className="p-6 mr-6 border-t border-white/10">
                   <Button
                     className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-3 font-light rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all duration-300 border-0"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Get Started
+                  </Button>
+                  <Button
+                    className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-3 font-light rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all duration-300 border-0"
+                    // onClick={}
+                  >
+                    logIn
                   </Button>
                 </div>
               </div>
@@ -154,6 +186,7 @@ export default function Navigation() {
           </motion.div>
         )}
       </AnimatePresence>
+      </Providers>
     </>
   )
 }
